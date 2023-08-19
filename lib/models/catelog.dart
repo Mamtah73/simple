@@ -1,4 +1,4 @@
-class CatlogModel {
+class CatelogModel {
   static List<Item> items = [
     Item(
         id: 1,
@@ -27,15 +27,15 @@ class Item {
       required this.color,
       required this.image});
 
-  Item.fromMap(Map<String, dynamic> map, this.id, this.name, this.desc,
-      this.price, this.color, this.image) {
-    Item(
-        id: map["id"],
-        name: map["name"],
-        desc: map["desc"],
-        price: map["price"],
-        color: map["color"],
-        image: map["image"]);
+  factory Item.fromMap(Map<String, dynamic> map) {
+    return Item(
+      id: map["id"],
+      name: map["name"],
+      desc: map["desc"],
+      price: map["price"],
+      color: map["color"],
+      image: map["image"],
+    );
   }
   tomap() => {
         "id": id,

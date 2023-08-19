@@ -1,7 +1,9 @@
+// ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:myapp/widgets/drawer.dart';
 import 'package:myapp/widgets/item_wiget.dart';
 
 import 'models/catelog.dart';
@@ -19,7 +21,6 @@ class _HomepageState extends State<Homepage> {
 
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     loadData();
   }
@@ -27,15 +28,16 @@ class _HomepageState extends State<Homepage> {
   loadData() async {
     final catelogJson = await rootBundle.loadString("assets/files/files.json");
     final decodeData = jsonDecode(catelogJson);
-    var productsData = decodeData["products"];
-    // print(productsData);
-    CatlogModel.items = List.from(productsData)
+    final productsData = decodeData["products"];
+    CatelogModel.items = List.from(productsData)
         .map<Item>((item) => Item.fromMap(item))
         .toList();
+    setState(() {});
   }
 
   @override
   Widget build(BuildContext context) {
+    // final CatlogModelList = List.generate(10, (index) => CatlogModel.items[0]);
     return Scaffold(
       appBar: AppBar(
         title: Text(
@@ -44,14 +46,18 @@ class _HomepageState extends State<Homepage> {
         backgroundColor: Colors.red,
         centerTitle: true,
       ),
-      body: ListView.builder(
-        itemCount: CatlogModel.items.length,
-        itemBuilder: (context, index) {
-          return ItemWidget(
-            item: CatlogModel.items[index],
-          );
-        },
+      body: Padding(
+        padding: const EdgeInsets.all(16.0),
+        child: ListView.builder(
+          itemCount: CatelogModel.items.length,
+          itemBuilder: (context, index) {
+            return ItemWidget(
+              item: CatelogModel.items[index],
+            );
+          },
+        ),
       ),
+      drawer: MyDrawer(),
     );
   }
 }

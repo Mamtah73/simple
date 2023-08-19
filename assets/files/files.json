@@ -11,21 +11,21 @@
 
         {
             "id": 2,
-            "name": " laptop",
+            "name": "butterfly",
             "desc": " 11th gen with good light keyboard",
-            "price": 800000,
+            "price": 66,
             "color": "#33505a",
-            "image":"https://img.freepik.com/premium-psd/laptop-psd-mockup-with-gradient-led-light_53876-138283.jpg" 
+            "image":"https://wallpaperaccess.com/full/2426128.jpg" 
         },
 
         {
 
             "id": 3,
-            "name": " laptop",
+            "name": "beauty",
             "desc": " 11th gen with good light keyboard",
-            "price": 800000,
+            "price": 99,
             "color": "#33505a",
-            "image":"https://img.freepik.com/premium-psd/laptop-psd-mockup-with-gradient-led-light_53876-138283.jpg" 
+            "image":"https://media.wired.com/photos/645bd1ff90167265276c86a0/master/w_320,c_limit/Google-IO-2023-Docked-Tablet%20-%20Hazel-Gear.jpg" 
         },
 
         {
@@ -41,18 +41,18 @@
             "id": 5,
             "name": " laptop",
             "desc": " 11th gen with good light keyboard",
-            "price": 800000,
+            "price": 8999,
             "color": "#33505a",
-            "image":"https://img.freepik.com/premium-psd/laptop-psd-mockup-with-gradient-led-light_53876-138283.jpg" 
+            "image":"https://media.croma.com/image/upload/v1667851459/Croma%20Assets/Computers%20Peripherals/Tablets%20and%20iPads/Images/249129_0_mds3pq.png" 
         },
 
         {
             "id": 6,
             "name": " laptop",
             "desc": " 11th gen with good light keyboard",
-            "price": 800000,
+            "price":9999,
             "color": "#33505a",
-            "image":"https://img.freepik.com/premium-psd/laptop-psd-mockup-with-gradient-led-light_53876-138283.jpg" 
+            "image":"https://image.shutterstock.com/image-photo/natural-pastel-background-morpho-butterfly-260nw-1927160003.jpg" 
         }
     ]
 }
